@@ -21,14 +21,14 @@ public class ShopController {
     @ApiOperation("设置店铺营业状态")
     public Result setStatus(@PathVariable Integer status){
         log.info("设置店铺营业状态:{}",status==1?"营业中":"打烊中");
-        redisTemplate.opsForValue().set("KEY",status);
+        redisTemplate.opsForValue().set(KEY,status);
         return Result.success();
     }
     //获取店铺的营业状态
     @GetMapping("/status")
     @ApiOperation("获取店铺的营业状态")
     public Result<Integer> getStatus(){
-        Integer status = (Integer) redisTemplate.opsForValue().get("KEY");
+        Integer status = (Integer) redisTemplate.opsForValue().get(KEY);
         log.info("获取店铺的营业状态:{}",status==1?"营业中":"打烊中");
         return Result.success(status);
     }

@@ -16,7 +16,7 @@ spring:
 redis:
   host: ${sky.redis.host}
   port: ${sky.redis.port}
-#  password: ${sky.redis.password}
+  password: ${sky.redis.password}
   database: ${sky.redis.database}
 mybatis:
   #mapper配置文件
@@ -42,6 +42,9 @@ sky:
     admin-ttl: 7200000
     # 设置前端传递过来的令牌名称
     admin-token-name: token
+    user-secret-key: itheima
+    user-ttl: 7200000
+    user-token-name: authentication
 #  alioss:
 #    endpoint: ${sky.alioss.endpoint}
 #    access-key-id: ${sky.alioss.access-key-id}
@@ -55,5 +58,7 @@ sky:
           - classpath:/static/
           - classpath:/public/
           - file:C:/Users/chy/Downloads/itheima/sky-take-out/images/
-
+    wechat:
+      appid：${sky.wechat.appid}
+      secret：${sky.wechat.secret}
 

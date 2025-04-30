@@ -50,15 +50,18 @@ sky:
 #    access-key-id: ${sky.alioss.access-key-id}
 #    access-key-secret: ${sky.alioss.access-key-secret}
 #    bucket-name: ${sky.alioss-bucket-name}
-    spring:
-      resources:
-        static-locations:
-          - classpath:/META-INF/resources/
-          - classpath:/resources/
-          - classpath:/static/
-          - classpath:/public/
-          - file:C:/Users/chy/Downloads/itheima/sky-take-out/images/
-    wechat:
-      appid：${sky.wechat.appid}
-      secret：${sky.wechat.secret}
-
+  spring:
+    resources:
+      static-locations:
+        - classpath:/META-INF/resources/
+        - classpath:/resources/
+        - classpath:/static/
+        - classpath:/public/
+        - file:C:/Users/chy/Downloads/itheima/sky-take-out/images/
+  wechat:
+    appid：${sky.wechat.appid}
+    secret：${sky.wechat.secret}
+  shop:
+    address: 北京市海淀区上地十街10号
+  baidu:
+    ak: YkRnFpKJ9djgl0zDqqgZGQbKktQOFBx7
